@@ -1,0 +1,825 @@
+$border: solid 1px white;
+
+@mixin box-sells{
+    position: relative;
+                display: flex;
+                flex-direction: column-reverse;
+                border-radius: 10px;
+                background-color: white;
+                width: 200px;
+                .discription{
+                    background-color: black;
+                    height: 44px;
+                    width: 100%;
+                    align-items: center;
+                    display: flex;
+                    padding: 0 23px;
+                    font-size: 13.4px;
+                    cursor: pointer;
+                    border: $border;
+
+                        &:hover{
+                            background-color: white;
+                        }
+                        &:hover a{color: black;}
+                    a{
+                        color: white;
+                        padding-left: 7px;
+                        font-size: 20px;
+                        
+                    }
+                }
+              .img-container{
+
+                  img{
+                        width: 100%;
+                        height: 100%;
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 10px;                        
+                    }
+              }  
+
+
+}
+@mixin box-courses{
+    position: relative;
+            .img-container{
+                
+                width: 27rem;
+                height: 32rem;
+                img{
+                    
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                
+            }
+
+            .box{ position: absolute;
+                top: 0;
+                left: 0; 
+                background-color: #0f0e0e;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+
+                .title-one{
+                    border: $border;
+                    width: 100%;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: large;
+                }
+
+                .course-content{
+                    width: 100%;
+                    .title-content{
+                        text-align: start;
+                        text-transform: capitalize;
+                        font-size: x-large;
+                    }
+                    .content{
+                        font-size: xx-large;
+                        p{
+                            padding: 1rem;
+                        }
+                    }
+                    .registration{
+                        width: 100%;
+                        background: white;
+                        height: 40px;
+
+                        a{
+                            position: relative;
+                            top: 7px;
+                            left: 113px;
+                            font-size: 20px;
+                            text-transform: uppercase;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:monospace;
+    transition: all 0.3s ease-in-out; 
+}
+body{
+    margin: 0%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    overflow-x:hidden;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 40px ;
+}
+
+/* ===========start screen reprosition============= */
+
+/* Big */
+@media (min-width: 1200px) { .container{
+    width: 1170px;
+}
+}
+
+/* Meidium */
+@media (min-width: 992px) { .container{
+    width: 970px;
+}
+}
+
+/* Small */
+@media (min-width: 768px) { .container{
+    width: 750px;
+}
+}
+/* ===========  End screen reprosition=============== */
+
+/* ==========start nav bar============= */
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000000000;
+    .container{
+        border-bottom: solid 1px black;
+        display: flex;
+        justify-content: space-between;
+        height: 70px;
+        align-items: center;
+
+        .logo{ 
+            a{ 
+                color: white;
+                font-size: 25px;
+                border-bottom: 3px;
+                &:hover{ 
+                    color: black !important; 
+                }
+            }
+        }
+       .links{
+           ul{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 8px;
+            flex-direction: row-reverse;
+                .home{
+                    a{
+                        background: black;
+                        border-radius: 0.5rem;
+                        width: 72px;
+                        height: 35px;
+                        align-items: center;
+                        display: flex;
+                        position: relative; left: 10px;
+                        padding: 0 4.5px;
+
+
+
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                    }
+                }
+                li{
+                
+                    a{
+                    font-weight: bold;
+                    font-family: "Font Awesome 6 Free";
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                    color: white;
+                    &:hover{
+                        color: black;
+                  }
+                    }
+                }
+            }            
+        }
+
+
+
+
+    }
+
+
+}
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .nav-bar {
+        .container{
+            .links{
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========end nav bar============= */
+
+// ===============start landing page==============
+.landing-page{
+                height: 100vh;
+                background-image: url('../img/thumb-415348697_KFCT2xqP_violin_in_orchestra_1110x741.jpg');      
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+            .background-image{
+                position: absolute; left: 0; top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to top, #0f0e0e 0%, rgba(6, 5, 7, 0.35) 99%, rgba(8, 7, 10, 0.5) 100%);
+            }
+
+
+            
+        .container{
+            position: absolute;
+            left: 27%;
+            top: 40%;
+            text-transform: capitalize;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #fff9f9;
+            text-align: start;            
+            h1{
+                font-size: 62px
+            }
+            h2{
+                    font-size: 24px;
+                    letter-spacing: 2px;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    padding: 0 16px;
+
+                    a{
+                        color: #0000ff9c;
+                        background: #ffffff4f;
+                        border-radius: 7px;
+                    }
+            }
+        }
+        }
+            
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .landing-page {
+        .container {
+            h1{
+                font-size: 32px;
+                width: 300px;
+                position: relative;
+                right: 82px;
+            }
+            h2{
+                font-size: 20px;
+                position: absolute;
+                top: 103px;
+                left: -79px;
+                width: 90%;
+                text-align: center;
+                a{display: block;}
+            }
+        }
+
+    }
+    
+}
+
+
+
+
+
+// ===============end landing page==============
+
+        /*========start quote section==========*/ 
+.Quote{ 
+    border-top: solid 2px white;
+    margin-bottom: 3rem;
+    
+    .container{
+        border-bottom: solid 2px white;
+        p{
+        padding: 5px;
+        font-size: 23px;
+        font-family:monospace;
+    }
+}
+    
+}
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .Quote .container p{
+
+        text-align: start;
+        font-size: 20px;    
+    }
+}
+
+
+
+
+/*========end quote section==========*/ 
+
+/*========start sells section========*/
+
+
+.sells{
+    margin-bottom: 4rem;
+    .container{
+        border-bottom: $border;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        .sells-title{
+            border-bottom: $border;
+            margin-bottom: 3rem;
+            h1{
+                text-align: center;
+                text-transform: capitalize;
+            }
+            
+            
+        }
+        .violin-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 5rem;
+            .one{
+                @include box-sells
+            }
+
+
+
+            .two{
+                @include box-sells
+            }
+                
+            .three{
+                @include box-sells
+            }
+        }    
+        }
+    }
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .sells .container .violin-container{
+        justify-content: center;
+     .one{
+
+         .discription{
+             &:hover{
+                 background-color: black;                 
+             }
+             &:hover a{
+                color: white;
+             }
+         }
+     }
+     .two{
+        .discription{
+            &:hover{
+                background-color: black;                 
+            }
+            &:hover a{
+               color: white;
+                }
+            }
+
+        }
+        .three{
+            .discription{
+                &:hover{
+                    background-color: black;                 
+                }
+                &:hover a{
+                   color: white;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*=============== end sells section==============*/ 
+
+/*=============start courses section=============== */ 
+
+.coures{
+    margin-bottom: 4rem;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+        .div-flex{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:center;
+            gap:3rem;
+        }
+        .title{
+        width: 300px;
+        text-align: center;
+        margin-bottom: 6rem;
+        text-transform: uppercase;
+            h1{
+            font-size: 60px;
+            border: $border;
+            border-radius: 10px;
+          }
+        }
+        .level-one{
+            @include box-courses
+        }
+        .level-two{
+            @include box-courses
+        }   
+       
+        .level-three{
+            @include box-courses
+        }
+    }
+
+}
+
+/* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .coures {
+
+        .container {
+
+            .title{
+
+                h1{
+                    font-size: 35px;
+                    width: 200px;
+                    position: relative;
+                    left: 44px;
+                }
+            }
+            .level-one{
+                width: 90%;
+                .img-container{
+                    width: 100%;
+                }
+                
+                .box{
+                    .title-one{
+                        font-size: 14px;
+                    
+                    }
+                    .course-content{
+                
+                        .title-content{
+                          
+                            h2{
+                              font-size: 23px;
+                          }
+                        } 
+                        .content{
+                            
+                            p{
+                                font-size: 18.2px;
+                                padding: 15px 0px;
+                            }
+                        } 
+                        .registration{
+                            margin-top: 56.3px;
+                            a{
+                                position: relative !important;
+                                left: 73px !important;
+                            }
+                    
+                        }
+                    }
+            }
+        }
+
+
+        .level-two{
+            width: 90%;
+            .img-container{
+                width: 100%;
+            }
+            
+            .box{
+                .title-one{
+                    font-size: 14px;
+                    
+                
+                }
+                .course-content{
+            
+                    .title-content{
+                      
+                        h2{
+                          font-size: 23px;
+                      }
+                    } 
+                    .content{
+                        
+                        p{
+                            font-size: 18.2px;
+                            padding: 15px 0px;
+                        }
+                    } 
+                    .registration{
+                        margin-top: 56.3px;
+                        a{
+                            position: relative !important;
+                            left: 73px !important;
+                        }
+                
+                    }
+                }
+        }
+    }
+
+    .level-three{
+        width: 90%;
+        .img-container{
+            width: 100%;
+        }
+        
+        .box{
+            .title-one{
+                font-size: 14px;
+            
+            }
+            .course-content{
+        
+                .title-content{
+                  
+                    h2{
+                      font-size: 23px;
+                  }
+                } 
+                .content{
+                    
+                    p{
+                        font-size: 18.2px;
+                        padding: 15px 0px;
+                    }
+                } 
+                .registration{
+                    margin-top: 56.3px;
+                    a{
+                        position: relative !important;
+                        left: 73px !important;
+                    }
+            
+                }
+            }
+    }
+}
+
+    } 
+
+
+    }
+   
+}
+
+
+// =============end courses section===============
+
+/* =============start comment section=============== */ 
+
+.call-us{
+    margin-top: 4rem;
+    
+    .container{
+        border-top: $border;
+        display: grid;
+        justify-items: center;
+
+        h5{
+            margin-top: 4rem;
+            text-transform: capitalize;
+            font-size: xx-large;
+            font-weight: inherit;
+        }
+        h1{
+            margin-top: 2rem;
+            margin-bottom: 2.5rem;
+            background-color: white;
+            color: black;
+            border-radius: 14px;
+            padding: 5px;
+            text-transform: capitalize;
+            font-size: xx-large;
+        }
+        .input-container{
+            form{ 
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                
+                .username{
+                    input{
+
+                        width: 318px;
+                        height: 50px;
+                        border-radius: 10px;
+                        border: none;
+                        margin-bottom: 2rem;
+                    }
+
+                }
+                .email{
+                    input{
+
+                        width: 318px;
+                        height: 50px;
+                        border-radius: 10px;
+                        border: none;
+                        margin-bottom: 2rem;
+                    }
+
+                }
+                .text-area{
+                    textarea{
+                        width: 318px;
+                        border-radius: 10px;
+                        border: none;
+                        margin-bottom: 2rem;
+                    }
+                    }
+                }
+                button{
+                    display: block;
+                    margin-bottom: 4rem;
+                    position: relative;
+                    left: 103px;
+                    border: none;
+                    background: white;
+                    width: 100px;
+                    height: 45px;
+                    border-radius: 10px;
+                    margin-top: 1.5rem;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    &:hover{
+                        background: black !important;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+    /* Big */
+@media (max-width: 1200px) { 
+}
+
+/* Meidium */
+@media (max-width: 992px) { 
+}
+
+
+/* Small */
+@media (max-width: 768px) {
+    .call-us {
+        .container{
+            h5{
+                font-size: 22px;
+            }
+            h1{
+                font-size: 26px;
+            }
+            .input-container{
+
+                form{
+
+                    .username{
+
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    .email{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    .text-area{
+                        textarea{
+                            width: 100%;
+                        }
+                    }
+                    button{
+                    position: relative ;
+                    left: 54px;
+                    }
+                }
+            }
+            
+
+
+        } 
+
+    }
+}
+
+
+/* =============end comment section=============== */ 
+
+
+
+
+
